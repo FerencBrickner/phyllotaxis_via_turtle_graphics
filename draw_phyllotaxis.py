@@ -114,6 +114,8 @@ class SupportsShapeFilling(Protocol):
     def begin_fill(self) -> None: ...
 
     def end_fill(self) -> None: ...
+
+
 @contextmanager
 def fill_shape(*, actual_turtle: SupportsShapeFilling) -> Generator[None, None, None]:
     actual_turtle.begin_fill()
